@@ -1,0 +1,23 @@
+#### Track overall disk space with df:####
+
+ubuntu@ip-172-31-92-10:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       6.8G  2.0G  4.8G  30% /
+tmpfs           479M     0  479M   0% /dev/shm
+tmpfs           192M  880K  191M   1% /run
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/xvda16     881M   86M  734M  11% /boot
+/dev/xvda15     105M  6.2M   99M   6% /boot/efi
+tmpfs            96M   12K   96M   1% /run/user/1000
+
+#### Track directory-specific disk usage with du (example for /var): ####   
+
+ubuntu@ip-172-31-92-10:~$ sudo du -sh /var/log
+17M	/var/log
+
+Use du to check directory sizes:
+ubuntu@ip-172-31-92-10:~$ du -sh /var/www/html > directory_usage.txt
+# This command will output the size of the /var/www/html directory to directory_usage.txt.
+ubuntu@ip-172-31-92-10:~$ cat directory_usage.txt
+20K	/var/www/html
+# This command will display the size of the /var/www/html directory.

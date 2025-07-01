@@ -1,0 +1,48 @@
+#Run htop or nmon to monitor CPU, memory, and process usage.
+#To log the output of htop, we can use:
+
+ubuntu@ip-172-31-92-10:~$ htop -d 10 > htop_log.txt
+#This command will run htop and log the output to htop_log.txt every 10 seconds.
+#To log the output of nmon, we can use:
+#This command will run nmon and log the output to a file every 10 seconds for 60 iterations.
+#The -f option specifies that the output should be written to a file, -s specifies the interval in seconds, and -c specifies the number of iterations.
+#The output file will be named nmon_YYYYMMDD_HHMM.nmon, where YYYYMMDD_HHMM is the current date and time.
+#To run nmon, we can use:
+ubuntu@ip-172-31-92-10:~$ sudo apt-get install nmon
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+ubuntu@ip-172-31-92-10:~$ nmon
+nmon─16p─────────────────────Hostname=ip-172-31-92-Refresh= 2secs ───07:53.20──────────────────────────────────────────────────┐
+│                                                                                                                               │
+│   ------------------------------                                                                                              │
+│    _ __  _ __ ___   ___  _ __          For help type H or ...                                                                 │
+│   | '_ \| '_ ` _ \ / _ \| '_ \          nmon -?  - hint                                                                       │
+│   | | | | | | | | | (_) | | | |         nmon -h  - full details                                                               │
+│   |_| |_|_| |_| |_|\___/|_| |_|                                                                                               │
+│                                        To stop nmon type q to Quit                                                            │
+│   ------------------------------                                                                                              │
+│                                                                                                                               │
+│                                                                                                                               │
+│                                                                                                                               │
+│                                                                                                                               │
+│                                                                                                                               │
+│                                                                                                                               │
+│                                                                                                                               │
+│   Use these keys to toggle statistics on/off:                                                                                 │
+│     c = CPU         l = CPU Long-term     - = Faster screen updates                                                           │
+│     C = " WideView  U = Utilisation       + = Slower screen updates                                                           │
+│     m = Memory      V = Virtual memory    j = File Systems                                                                    │
+│     d = Disks       n = Network           . = only busy disks/procs                                                           │
+│     r = Resource    N = NFS               h = more options                                                                    │
+│     k = Kernel      t = Top-processes     q = Quit                                                                            │
+│───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────│
+
+nmon─16p──────[H for help]───Hostname=ip-172-31-92-Refresh= 2secs ───07:54.17──────────────────────────────────────────────────┐
+│ CPU Utilisation ──────────────────────────────────────────────────────────────────────────────────────────────────────────────│
+│---------------------------+-------------------------------------------------+                                                 │
+│CPU User%  Sys% Wait%  Idle|0          |25         |50          |75       100|                                                 │
+│  1   0.0   0.0   0.0 100.0|>                                                |                                                 │
+│---------------------------+-------------------------------------------------+                                                 │
+│───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────│

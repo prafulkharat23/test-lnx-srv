@@ -1,0 +1,29 @@
+Create Isolated Directories:
+// Objective: Create isolated directories for each developer to ensure secure access control and prevent unauthorized access to each other's files. 
+// Create Isolated Directories for Developers:
+ubuntu@ip-172-31-92-10:~$ sudo mkdir /home/sarah/workspace
+ubuntu@ip-172-31-92-10:~$ sudo mkdir /home/mike/workspace
+# The above commands create isolated directories for each developer, ensuring that they have their own workspace.   
+# Set Permissions for Isolated Directories:
+ubuntu@ip-172-31-92-10:~$ sudo chown sarah:sarah /home/sarah/workspace
+ubuntu@ip-172-31-92-10:~$ sudo chown mike:mike /home/mike/workspace
+# The above commands set the ownership of the directories to the respective users, ensuring that only they have access to their own directories.   
+# Set Directory Permissions:
+ubuntu@ip-172-31-92-10:~$ sudo chmod 700 /home/sarah/workspace
+ubuntu@ip-172-31-92-10:~$ sudo chmod 700 /home/mike/workspace
+# The above commands set the permissions of the directories to 700, allowing only the owner to read, write, and execute files in their own directory.   
+# Verify Directory Creation and Permissions:
+ubuntu@ip-172-31-92-10:~$ sudo ls -ld /home/sarah/workspace
+drwx------ 2 sarah sarah 4096 Jul  1 08:16 /home/sarah/workspace
+ubuntu@ip-172-31-92-10:~$ sudo ls -ld /home/mike/workspace
+drwx------ 2 mike mike 4096 Jul  1 08:16 /home/mike/workspace
+ubuntu@ip-172-31-92-10:~$
+# The above commands verify that the directories have been created with the correct permissions, ensuring that each developer has isolated access to their own workspace.   
+# The output shows that the directories are owned by the respective users (sarah and mike) and have permissions set to 700, meaning only the owner can read, write, and execute files in their own directory.   
+# This setup ensures secure access control  and prevents unauthorized access to each other's files, fulfilling the objective of creating isolated directories for each developer.
+# The developers can now work in their isolated directories without interfering with each other's files, ensuring a secure and organized workspace.   
+# The isolated directories can be used for development, testing, and storing project files, providing a secure environment for each developer to work independently.   
+# This setup also allows for easy management of user permissions and access control, ensuring that each developer has the necessary access to their own files while preventing unauthorized access to each other's directories.   
+# The isolated directories can be further customized with additional subdirectories for specific projects or tasks, allowing for better organization and management of files.
+# The developers can also create additional directories within their isolated workspace as needed, providing flexibility for their development activities.
+# This approach not only enhances security but also promotes a clean and organized workspace for each developer, allowing them to focus on their tasks without worrying about file access issues.   

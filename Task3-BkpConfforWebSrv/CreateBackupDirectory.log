@@ -1,0 +1,10 @@
+ubuntu@ip-172-31-92-10:~$ sudo mkdir /backups
+# Create a backup directory for storing backups
+ubuntu@ip-172-31-92-10:~$ sudo chmod 700 /backups
+# Set permissions for the backup directory to allow only the owner to read, write, and execute files in the directory
+ubuntu@ip-172-31-92-10:~~$ sudo chown ubuntu:ubuntu /backups
+# Change ownership of the backup directory to the current user (ubuntu)
+# Verify the backup directory creation and permissions
+ubuntu@ip-172-31-92-10:~$ sudo ls -ld /backups
+drwx------ 2 ubuntu ubuntu 4096 Jul  1 08:16 /backups
+# The output shows that the backup directory has been created with the correct permissions  
