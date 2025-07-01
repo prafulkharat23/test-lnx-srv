@@ -1,0 +1,43 @@
+#### For htop: ####
+ubuntu@ip-172-31-92-10:~$ sudo apt-get update
+ubuntu@ip-172-31-92-10:~$ sudo apt-get install htop
+ubuntu@ip-172-31-92-10:~$ sudo apt-get install htop
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+htop is already the newest version (3.3.0-4build1).
+htop set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 33 not upgraded.
+ubuntu@ip-172-31-92-10:~$
+
+#### For nmon: ####
+ubuntu@ip-172-31-92-10:~$ sudo apt-get install nmon
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  nmon
+0 upgraded, 1 newly installed, 0 to remove and 33 not upgraded.
+Need to get 71.4 kB of archives.
+After this operation, 184 kB of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 nmon amd64 16p+debian-1 [71.4 kB]
+Fetched 71.4 kB in 0s (2266 kB/s)
+Selecting previously unselected package nmon.
+(Reading database ... 70681 files and directories currently installed.)
+Preparing to unpack .../nmon_16p+debian-1_amd64.deb ...
+Unpacking nmon (16p+debian-1) ...
+Setting up nmon (16p+debian-1) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu@ip-172-31-92-10:~$
